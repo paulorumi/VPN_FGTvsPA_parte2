@@ -20,6 +20,7 @@ Este projeto automatiza esse processo, garantindo:
 - Log detalhado de tudo que foi aplicado  
 ---
 
+
 ## 🎥 Vídeo demonstrativo
 Clique na imagem abaixo para assistir no YouTube:
 

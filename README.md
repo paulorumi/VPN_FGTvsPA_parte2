@@ -79,13 +79,45 @@ As demais são da biblioteca padrão (não precisam ser instaladas separadamente
 
 
 # 🏗 Estrutura do Projeto
+
 ```text
 VPN_FGTvsPA/
-├─ config/
-│  └─ vpn_params_example.yaml      # Arquivo de configuração da VPN (editado pela GUI)
-├─ scripts/
-│  ├─ configure_vpn_fortigate.py   # Aplica configuração no Fortigate
-│  └─ configure_vpn_paloalto.py    # Aplica configuração no Palo Alto
-├─ main_gui.py                     # Arquivo principal da interface Tkinter (nome de exemplo)
-├─ README.md                       # 
-└─ requirements.txt                # Lista de dependências
+│
+├─ .venv/                     # Ambiente virtual (não versionado)
+│
+├─ backend/                   # Camada principal de automação
+│  ├─ services/
+│  │  ├─ fortigate_vpn.py     # Lógica de automação Fortigate
+│  │  ├─ paloalto_vpn.py      # Lógica de automação Palo Alto
+│  │  └─ connectivity_test.py # Testes de conectividade VPN
+│  │
+│  ├─ __init__.py
+│  └─ main.py                 # Ponto de entrada backend
+│
+├─ config/                    # Arquivos YAML de configuração
+│  ├─ interfaces_example.yaml
+│  └─ vpn_params_example.yaml
+│
+├─ frontend/                  # Interface Web
+│  ├─ index.html
+│  └─ app.js
+│
+├─ scripts/                   # Scripts auxiliares e testes
+│  ├─ configure_vpn_fortigate.py
+│  ├─ configure_vpn_paloalto.py
+│  ├─ test_pa_api.py
+│  └─ test_vpn_connectivity.py
+│
+├─ docs/                      # Documentação técnica
+│  ├─ plano-automacao-vpn-ipsec.md
+│  └─ topologia-pnetlab.md
+│
+├─ old/                       # Arquivos antigos / versões anteriores
+│
+├─ app_tk.py                  # Interface Tkinter legada
+├─ frontend_tk.py             # Frontend Tkinter alternativo
+│
+├─ requirements.txt
+├─ test_yaml.py
+├─ .gitignore
+└─ README.md

@@ -42,6 +42,44 @@ As demais são da biblioteca padrão (não precisam ser instaladas separadamente
 - `urllib3`
 - `json` / `typing` (se usados em versões futuras)
 
+## Evidências
+
+### Topologia do laboratório
+![Topologia](docs/evidencias/topologia.png)
+
+### Frontend (Tkinter)
+![Frontend](docs/evidencias/frontend.png)
+
+### Validação com alertas de sucesso - FORTIGATE
+![Alertas_Sucesso](docs/evidencias/validacao_fgt.png)
+
+### Validação com alertas de sucesso - PALO ALTO
+![Alertas_Sucesso](docs/evidencias/validacao_pa.png)
+
+### Validação de Configurações VPN - FORTIGATE
+- Criação de Rotas
+![Routes](docs/evidencias/fgt_routes.png)
+- Criação da VPN (Phase 1 e 2)
+![vpn-p1](docs/evidencias/fgt_vpn.png)
+- Regra de Firewall
+![FW_Rules](docs/evidencias/fgt_policy.png)
+- VPN Status
+![VPN_Status](docs/evidencias/fgt_vpnstatus.png)
+
+### Validação de Configurações VPN - PALO ALTO
+- Criação de Rotas
+![Routes](docs/evidencias/pa_routes.png)
+- Criação da VPN (Phase 1 e 2)
+![vpn-p1](docs/evidencias/pa_vpn1.png)
+![vpn-p1](docs/evidencias/pa_vpn2.png)
+- Regra de Firewall
+![FW_Rules](docs/evidencias/pa_policy.png)
+- VPN Status
+![VPN_Status](docs/evidencias/pa_vpnstatus.png)
+
+
+# 🏗 Estrutura do Projeto
+```text
 VPN_FGTvsPA/
 ├─ config/
 │  └─ vpn_params_example.yaml      # Arquivo de configuração da VPN (editado pela GUI)
@@ -49,5 +87,5 @@ VPN_FGTvsPA/
 │  ├─ configure_vpn_fortigate.py   # Aplica configuração no Fortigate
 │  └─ configure_vpn_paloalto.py    # Aplica configuração no Palo Alto
 ├─ main_gui.py                     # Arquivo principal da interface Tkinter (nome de exemplo)
-├─ README.md                       # Este arquivo
-└─ requirements.txt                # (opcional) Lista de dependências
+├─ README.md                       # 
+└─ requirements.txt                # Lista de dependências

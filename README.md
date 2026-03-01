@@ -12,7 +12,19 @@ A aplicação possui:
 
 > 🔎 **Nota:** Esta automação foi desenvolvida com auxílio de uma IA da **OpenAI** (modelo GPT-5.1 Thinking), refinindo scripts, lógica de API e interface.
 
+Este projeto automatiza esse processo, garantindo:
+
+- Parâmetros de criptografia idênticos em ambos os lados  
+- Phase 2 / Selectors no Fortigate alinhados com Proxy IDs no Palo Alto  
+- Rotas estáticas e policies criadas de forma consistente  
+- Log detalhado de tudo que foi aplicado  
 ---
+
+## 🎥 Vídeo demonstrativo
+Clique na imagem abaixo para assistir no YouTube:
+
+[![Vídeo demonstrativo - VPN_FGTvsPA](https://img.youtube.com/vi/vE2MqogPt5I/hqdefault.jpg)](https://youtu.be/vE2MqogPt5I)
+
 
 ## 1. Requisitos
 

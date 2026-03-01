@@ -1,0 +1,46 @@
+fortigate:
+  host: 192.168.15.101
+  api_token: b8H59b5xrwrhmy0pprzxkHy0jgn8fq
+  vdom: root
+paloalto:
+  host: 192.168.15.60
+  api_key: LUFRPT0xSW5SeVpTaVVNWE9ySmdISFhnS1ZxWVl2Um89UHh4anZLakxZclpKeW43Ly82anljS1R0QVBiZUlmRCtscFlpSlBqWFZPNHU0aWFpeHVEbUpvQnhxZ1BUdkxFUg==
+  vsys: vsys1
+  external_if: ethernet1/1
+  tunnel_if: tunnel.1
+  zone_lan: vpn
+  zone_vpn: vpn
+  virtual_router: default
+vpn:
+  name: VPN-FGT-PA
+  psk: admin123
+  remote_gw_fgt: 2.2.2.2
+  tunnel_network:
+    network: 169.255.1.0/30
+    fortigate_ip: 169.255.1.1/30
+    paloalto_ip: 169.255.1.2/30
+  ike_phase1:
+    version: ikev2
+    encryption: des
+    integrity: sha1
+    dh_group: 2
+    lifetime: 28800
+  ipsec_phase2:
+    encryption: des
+    integrity: sha1
+    pfs: false
+    dh_group: 2
+    lifetime: 3600
+  networks:
+    site_a: 10.10.10.0/24
+    site_b: 10.20.20.0/24
+  remote_gw_pa: 1.1.1.1
+  phase2_pairs:
+  - fgt_local: 10.10.10.0/24
+    fgt_remote: 10.20.20.0/24
+    pa_local: 10.20.20.0/24
+    pa_remote: 10.10.10.0/24
+  - fgt_local: 192.168.10.0/24
+    fgt_remote: 192.168.20.0/24
+    pa_local: 192.168.20.0/24
+    pa_remote: 192.168.10.0/24

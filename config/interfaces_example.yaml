@@ -1,0 +1,11 @@
+fortigate:
+  wan_interface: "port1"
+  lan_interface: "port2"
+
+paloalto:
+  wan_interface: "ethernet1/1"
+  lan_interface: "ethernet1/2"
+  tunnel_interface: "tunnel.1"
+  lan_zone: "trust"
+  vpn_zone: "vpn"
+  virtual_router: "default"

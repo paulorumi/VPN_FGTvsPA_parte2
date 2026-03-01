@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Automação VPN FGT vs PA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 16px;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 10px;
+      max-height: 300px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automação VPN Fortigate x Palo Alto</h1>
+
+  <div>
+    <button id="btn-fgt">Aplicar VPN - Fortigate</button><br />
+    <button id="btn-pa">Aplicar VPN - Palo Alto</button><br />
+    <button id="btn-test">Testar conectividade (ping 10.20.20.1)</button>
+  </div>
+
+  <h2>Resultado</h2>
+  <pre id="output">{}</pre>
+
+  <script src="app.js"></script>
+</body>
+</html>
